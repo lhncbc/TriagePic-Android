@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Informational Notice:
+  ~
+  ~ This software, the ”TBD,” was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
+  ~
+  ~ The license of this software is an open-source BSD-like license.  It allows use in both commercial and non-commercial products.
+  ~
+  ~ The license does not supersede any applicable United States law.
+  ~
+  ~ The license does not indemnify you from any claims brought by third parties whose proprietary rights may be infringed by your usage of this software.
+  ~
+  ~ Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in Data—General.
+  ~ The license for this software is intended to be expansive, rather than restrictive, in encouraging the use of this software in both commercial and non-commercial products.
+  ~
+  ~ LICENSE:
+  ~
+  ~ Government Usage Rights Notice:  The U.S. Government retains unlimited, royalty-free usage rights to this software, but not ownership, as provided by Federal law.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ * Redistributions of source code must retain the above Government Usage Rights Notice, this list of conditions and the following disclaimer.
+  ~
+  ~ * Redistributions in binary form must reproduce the above Government Usage Rights Notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ * The names, trademarks, and service marks of the National Library of Medicine, the National Institutes of Health, and the names of any of the software developers shall not be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE U.S. GOVERNMENT AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE U.S. GOVERNMENT
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white1"
+    android:orientation="vertical" >
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        // left side pane
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            // left side button
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Send" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Draft" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonOutbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Outbox" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonSwitchViewNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Photo" />
+
+                <!--
+                <Button
+                    android:id="@+id/buttonSwitchViewNext"
+                    android:layout_weight="1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/next_button" />
+                    -->
+
+            </LinearLayout>
+
+            // left side under buttons
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PATIENT INFORMATION"
+                        android:padding="4dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#666666" />
+
+                    // last name
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/last_name_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/reunite_edit_height_48"
+                            android:hint="last name"
+                            android:inputType="textPersonName"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true">
+                        </EditText>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:text="Last Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // first name
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/first_name_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/reunite_edit_height_48"
+                            android:hint="first name"
+                            android:inputType="textPersonName"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true">
+                        </EditText>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:text="First Name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // gender
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="vertical"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true">
+
+                        <LinearLayout
+                            android:id="@+id/gendergroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:tag="Gender*">
+
+                            <CheckBox
+                                android:id="@+id/male"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:text="Male" />
+
+                            <CheckBox
+                                android:id="@+id/female"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:text="Female" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender*"
+                            android:paddingLeft="16dp"
+                            android:textStyle="italic"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // age
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="vertical"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true">
+
+                        <LinearLayout
+                            android:id="@+id/radioGroupAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/adult"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:text="Adult (18+)"
+                                android:focusableInTouchMode="false"
+                                android:focusable="true"
+                                android:enabled="true" />
+
+                            <CheckBox
+                                android:id="@+id/peds"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:text="Child (0-17)" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Age*"
+                            android:paddingLeft="16dp"
+                            android:textStyle="italic"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    </LinearLayout>
+
+                    // assignment
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ASSIGNMENT"
+                        android:padding="4dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // zone
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="4dp"
+                        android:orientation="vertical" >
+
+                        <Spinner
+                            android:id="@+id/spinnerZoneSel"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/reunite_edit_height_48"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Triage status*"
+                            android:paddingLeft="16dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // pid input select
+                    <LinearLayout
+                        android:id="@+id/radioGroupPidInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select tool:"
+                            android:layout_gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="italic" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:tag="Input method">
+
+                            <RadioButton
+                                android:id="@+id/radioButtonBarcode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="Barcode" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonManual"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="Manual" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAuto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/reunite_edit_height_48"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="Auto" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    // patient id
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="16dp"
+                        android:orientation="vertical" >
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/viewFlipperPidInput" >
+
+                        // manual input
+                        <LinearLayout
+                                android:id="@+id/viewManual"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:tag="Gender*">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textViewPrefixPid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="911"
+                                        android:textStyle="bold"
+                                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                    <TextView
+                                        android:id="@+id/textViewPidPrefix"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Prefix" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/reunite_button_height_48"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right">
+
+                                    <Button
+                                        android:id="@+id/buttonMinus"
+                                        android:layout_width="@dimen/reunite_button_height_48"
+                                        android:layout_height="@dimen/reunite_button_height_48"
+                                        android:background="@color/face_book_color"
+                                        android:textColor="@color/white1"
+                                        android:text="-"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textViewPid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:text=""
+                                        android:hint="123456789"
+                                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="wrap_content"
+                                        android:text="Suffix" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/reunite_button_height_48"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left">
+
+                                    <Button
+                                        android:id="@+id/buttonPlus"
+                                        android:layout_width="@dimen/reunite_button_height_48"
+                                        android:layout_height="@dimen/reunite_button_height_48"
+                                        android:background="@color/face_book_color"
+                                        android:textColor="@color/white1"
+                                        android:text="+"/>
+
+                                </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="6dp"
+                                android:layout_height="@dimen/reunite_button_height_48"></LinearLayout>
+
+                                <Button
+                                    android:id="@+id/buttonEnterNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/reunite_button_height_48"
+                                    android:background="@color/face_book_color"
+                                    android:textColor="@color/white1"
+                                    android:text="Manual"/>
+
+                            </LinearLayout>
+
+                        // barcode input
+                        <LinearLayout
+                            android:id="@+id/viewBarcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewPid2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="MD000000"
+                                android:layout_weight="1"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <Button
+                                android:id="@+id/buttonBarcodeScanner"
+                                android:layout_width="@dimen/reunite_button_length_120"
+                                android:layout_height="@dimen/reunite_button_height_48"
+                                android:layout_gravity="right"
+                                android:text="@string/scan"
+                                android:textColor="@color/white1"
+                                android:background="@color/face_book_color" />
+
+                        </LinearLayout>
+
+                            // Auto
+                            <LinearLayout
+                                android:id="@+id/viewAuto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewPid2Auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="AUTO###000000000"
+                                    android:layout_weight="1"
+                                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                <Button
+                                    android:id="@+id/buttonEnterNumberAuto"
+                                    android:layout_width="@dimen/reunite_button_height_48"
+                                    android:layout_height="@dimen/reunite_button_height_48"
+                                    android:background="@drawable/next_button" />
+
+                            </LinearLayout>
+
+                        </ViewFlipper>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Patient ID*"
+                            android:textStyle="italic"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // hospital
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="fill_horizontal|center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewHospital"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hospital name"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:layout_width="76dp"
+                                android:layout_height="wrap_content"
+                                android:text="Hospital*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textStyle="italic" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonSelectHospital"
+                            android:layout_width="@dimen/reunite_button_length_120"
+                            android:layout_height="@dimen/reunite_button_height_48"
+                            android:text="@string/hospital"
+                            android:textColor="@color/white1"
+                            android:background="@color/face_book_color" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    // event
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="fill_horizontal|center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewEvent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Event name"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:layout_width="76dp"
+                                android:layout_height="wrap_content"
+                                android:text="Event*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textStyle="italic" />
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/buttonSelectEvent"
+                                android:layout_width="@dimen/reunite_button_length_120"
+                                android:layout_height="@dimen/reunite_button_height_48"
+                                android:text="@string/event"
+                                android:textColor="@color/white1"
+                                android:background="@color/face_book_color" />
+
+                    </LinearLayout>
+
+                    // comments
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="COMMENTS"
+                        android:padding="4dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#666666" />
+
+                    <EditText
+                        android:id="@+id/comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:gravity="top"
+                        android:scrollbars = "vertical"
+                        android:hint="Tap here to add your comments"
+                        android:padding="16dp"
+                        android:ems="12"
+                        android:inputType="textMultiLine" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="* Critical item"
+                        android:padding="16dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        // right side pane
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            // right side buttons
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonSwitchViewPrevious"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Back" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Camera" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Gallery" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Primary" />
+
+            </LinearLayout>
+
+            <!-- 	android:drawableTop="@drawable/ic_media_fullscreen" -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#666666" />
+
+            // right side, photo section and under
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageViewPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/questionhead" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Crop" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/reunite_button_height_48"/>
+
+                <Button
+                    android:id="@+id/buttonDeleteImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/reunite_button_height_48"
+                    android:layout_weight="1"
+                    android:textColor="@color/white1"
+                    android:background="@color/face_book_color"
+                    android:text="Delete" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No image"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@id/image_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0/0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="italic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#666666" />
+
+                // Caption
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="fill_horizontal|center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/textViewCapition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:hint="Tap right button to add photo caption"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonAddCapition"
+                            android:layout_width="@dimen/reunite_button_length_120"
+                            android:layout_height="@dimen/reunite_button_height_48"
+                            android:background="@color/face_book_color"
+                            android:textColor="@color/white1"
+                            android:text="Add Capition"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caption"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#666666" />
+
+                // move left and right
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonMoveLeft"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/reunite_button_height_48"
+                        android:drawableLeft="@drawable/ic_move_left"
+                        android:layout_weight="1"
+                        android:text="Back"
+                        android:textColor="@color/white1"
+                        android:background="@color/face_book_color"/>
+
+                    <LinearLayout
+                        android:layout_width="4dp"
+                        android:layout_height="@dimen/reunite_button_height_48">
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonMoveRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/reunite_button_height_48"
+                        android:drawableRight="@drawable/ic_move_right"
+                        android:layout_weight="1"
+                        android:text="Forward"
+                        android:textColor="@color/white1"
+                        android:background="@color/face_book_color"/>
+
+                </LinearLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ViewSwitcher>
+<!--
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="right" />
+
+        -->
+
+</LinearLayout>

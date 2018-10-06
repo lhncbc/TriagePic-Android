@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Informational Notice:
+  ~
+  ~ This software, the ”TBD,” was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
+  ~
+  ~ The license of this software is an open-source BSD-like license.  It allows use in both commercial and non-commercial products.
+  ~
+  ~ The license does not supersede any applicable United States law.
+  ~
+  ~ The license does not indemnify you from any claims brought by third parties whose proprietary rights may be infringed by your usage of this software.
+  ~
+  ~ Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in Data—General.
+  ~ The license for this software is intended to be expansive, rather than restrictive, in encouraging the use of this software in both commercial and non-commercial products.
+  ~
+  ~ LICENSE:
+  ~
+  ~ Government Usage Rights Notice:  The U.S. Government retains unlimited, royalty-free usage rights to this software, but not ownership, as provided by Federal law.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ * Redistributions of source code must retain the above Government Usage Rights Notice, this list of conditions and the following disclaimer.
+  ~
+  ~ * Redistributions in binary form must reproduce the above Government Usage Rights Notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ * The names, trademarks, and service marks of the National Library of Medicine, the National Institutes of Health, and the names of any of the software developers shall not be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE U.S. GOVERNMENT AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE U.S. GOVERNMENT
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<changelog>
+    <release date="4/5/2018" summary="" versioncode="9000800" version="9.0.8.00">
++9+    </release>
+    <release date="11/15/2017" summary="" versioncode="9000700" version="9.0.7">
+        <change>Comparable to Android OS 4.4 and up. </change>
+    </release>
+    <release date="9/26/2017" summary="" versioncode="9000699" version="9.0.6">
+        <change>Fix an error in FaceMatch.</change>
+        <change>Add internet connection detection.</change>
+        <change>Fix an error: total number of records is incorrect. </change>
+    </release>
+    <release date="9/25/2017" summary="" versioncode="9000602" version="9.0.6-beta">
+        <change>Fix a discovered error in FaceMatch.</change>
+    </release>
+    <release date="9/12/2017" summary="" versioncode="9000601" version="9.0.6-beta">
+        <change>Add internet connection detection.</change>
+        <change>Total number of records are incorrect. </change>
+        <change>Fix error in face search.</change>
+    </release>
+    <release date="11/10/2016" summary="" versioncode="9000600" version="9.0.6-beta">
+        <change>Improve: work with mass casualty id without hyphen '-'.</change>
+    </release>
+    <release date="10/28/2015" summary="" versioncode="17" version="9.0.5">
+        <change>Improve: initialization functions in event detail fragment. So the details of the current event will be initially shown at the begging.</change>
+        <change>Fixed: error in filter settings for photo selection (with photos only or whatever).</change>
+        <change>Fixed: error in filter settings for zone (green, yellow, ctc).</change>
+        <change>Improve event search - add event status: reporting OPEN and reporting CLOSED.</change>
+    </release>
+    <release date="9/1/2015" summary="" versioncode="16" version="9.0.4">
+        <change>Temporary Disable crop image crash in Android OS 5.1.1 and above.</change>
+        <change>Add button to check server status on main screen.</change>
+        <change>Add button to change current event on main screen.</change>
+        <change>Fix an error in searching, that the first file contain 2 extra images.</change>
+        <change>Change the display format of time. The new one is "yyyy-mm-dd hh:mm:ss".</change>
+    </release>
+    <release date="9/1/2015" summary="" versioncode="15" version="9.0.3">
+        <change>Changed: URL end point is replaced by "plus1".</change>
+    </release>
+    <release date="7/17/2015" summary="" versioncode="14" version="9.0.2">
+        <change>Fixed: Reserved PIDs need to be updated every time when changing hospital</change>
+        <change>Improved: Better handle when no 3G, WIFI, or connection to seb server. No crash.</change>
+    </release>
+    <release date="7/10/2015" summary="" versioncode="13" version="9.0.1">
+        <change>Add new feature: automatically generate an PID in report. 1. Has a repository for reserved PIDs; 2. If repository is not empty, take one reserved PIDs; 3. If empty, get a block of reserved PIDs from web server.</change>
+        <change>Change hospital NLM uuid from 0 to 1. Our web site changed this earlier and caused errors in APP.</change>
+        <change>Update trademark from '™' to '®'.</change>
+    </release>
+    <release date="6/24/2015" summary="" versioncode="12" version="9.0.0">
+        <change>Add search function.</change>
+        <change>Fix the error: send report and does not have uuid returned.</change>
+        <change>Add view settings.</change>
+        <change>Add progress bar while download.</change>
+        <change>Add comments.</change>
+        <change>Add report abuse.</change>
+        <change>Add re-report.</change>
+        <change>Add info view for re-report.</change>
+        <change>Fix error and remove HomeActivity.</change>
+        <change>Fix error: switch view in top part does not work.</change>
+        <change>Fix error: The search order is not right.</change>
+        <change>Add progress bar display while download.</change>
+        <change>Add: add codes to make sure the first image is always the primary image.</change>
+        <change>Add: Latency function in main window.</change>
+        <change>Fix error: some images do not show up.</change>
+        <change>Fixed: Latency status icon on main screen are set to gravity center.</change>
+        <change>Fixed: uuid is incorrect.</change>
+        <change>Latency indicator is changed. Replace rating stars to new design.</change>
+        <change>Trademark is updated from '™' to '®'.</change>
+        <change>Modify manifest file for compatible issues discovered in previous version.</change>
+        <change>Improved: Face detection of image is a default option. The width of draw line reduced from 3 to 1.</change>
+        <change>Error fixed: the bitmap file was generated twice.</change>
+    </release>
+    <release date="9/8/2014" summary="" versioncode="11" version="8.0.5">
+        <change>Changes are made in user-permission in AndroidManifest. This is to try solve a problem: the Google Play Store does not show this app for a few type of tablets, such as Samsung 7" tablet. This could be caused in user permission.</change>
+        <change>Added a function to generate random names for demo purpose.</change>
+    </release>
+    <release date="8/1/2014" summary="" versioncode="10" version="8.0.4">
+        <change>Error fixed: Only in tablet and only when to report a new patient, only when the patient ID suffix number reduced to 0, press increase number button will cause exception error.</change>
+    </release>
+    <release date="7/22/2014" summary="" versioncode="9" version="8.0.3">
+        <change>Error fixed: for tablets, when selecting an empty box (e.g. Outbox), the detail fragment will not get re-flash.</change>
+        <change>Error fixed: Select hospital does not refresh patient ID prefix in report screen.</change>
+        <change>Error fixed: Select hospital in tablet mode causes exception error in report screen.</change>
+        <change>Error fixed: Select event in tablet mode causes exception error in report screen.</change>
+        <change>Improved: when retrieve the patient file, if a file is damaged, the damaged file will be deleted automatically.</change>
+        <change>Improved: when failed to find the next ID due the data damaged, this will be detected and a default number will be filled automatically.</change>
+    </release>
+    <release date="7/17/2014" summary="" versioncode="8" version="8.0.2">
+        <change>Report activities check boxes not lined up.</change>
+        <change>Add icon button in register screen.</change>
+        <change>Fix an error in function entering pid suffix number dialogue.</change>
+        <change>Prefix for patient ID is now default to "NLM" (was "911").</change>
+    </release>
+    <release date="7/11/2014" summary="" versioncode="7" version="8.0.1">
+        <change>Rearrange the menu items in login activity.</change>
+        <change>Fix a number of minor errors in login activity when the user choice to quit login.</change>
+        <change>Take out web server settings in box list fragment. This is to ensure the user will have to logout before change to a new web server.</change>
+    </release>
+    <release date="7/7/2014" summary="" versioncode="6" version="8.0.0">
+        <change>UI is optimized designed. TriagePic supports multiple size of screens.</change>
+        <change>Add a function to detect ZXing barcode scanner if is installed. If it is not installed, a function will guild the user to install ZXing barcode scanner.</change>
+        <change>Overwrite OnBackKeyPress() in both ReportCellActivity and PatientInfoCellActivity. Pressing back key on photo view screen will switch back to the first screen.</change>
+        <change>Update the launch icon file.</change>
+    </release>
+    <release version="7.0.4" versioncode="5" summary="" date="6/10/2014">
+        <change>Fix an error in registration.</change>
+        <change>Remove "cancel" button in login activity.</change>
+    </release>
+    <release version="7.0.3" versioncode="4" summary="" date="6/6/2014">
+        <change>Remove unused web server in selection. Default to TriageTrak web server.</change>
+        <change>Remove background image.</change>
+    </release>
+    <release version="7.0.2" versioncode="3" summary="" date="5/1/2014">
+        <change>Add detection of ZXing Barcode Scanner. If not installed, give the information of download and installation.</change>
+        <change>Further improve the login and setting procedure.</change>
+    </release>
+    <release version="7.0.1" versioncode="2" summary="" date="4/23/2014">
+        <change>Improve event selection function. Now, event selection is done in set up function only.</change>
+    </release>
+    <release version="7.0.0" versioncode="1" summary="API version upgraded to v33" date="4/18/2014">
+        <change>API version upgraded to v33</change>
+        <change>Add version change history</change>
+        <change>Create 2 image galleries: one for system; one for cropped images</change>
+        <change>Improve function crop image</change>
+        <change>Add comment input</change>
+        <change>Improve login process</change>
+        <change>Take off data encryption</change>
+    </release>
+    <release version="6.0.0" versioncode="0" summary="API version upgraded to v32" date="4/2/2014">
+        <change>API version upgraded to v32</change>
+        <change>UI changes</change>
+        <change>Add bar core scanner</change>
+    </release>
+</changelog>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Informational Notice:
+  ~
+  ~ This software, the ”TBD,” was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
+  ~
+  ~ The license of this software is an open-source BSD-like license.  It allows use in both commercial and non-commercial products.
+  ~
+  ~ The license does not supersede any applicable United States law.
+  ~
+  ~ The license does not indemnify you from any claims brought by third parties whose proprietary rights may be infringed by your usage of this software.
+  ~
+  ~ Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in Data—General.
+  ~ The license for this software is intended to be expansive, rather than restrictive, in encouraging the use of this software in both commercial and non-commercial products.
+  ~
+  ~ LICENSE:
+  ~
+  ~ Government Usage Rights Notice:  The U.S. Government retains unlimited, royalty-free usage rights to this software, but not ownership, as provided by Federal law.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ * Redistributions of source code must retain the above Government Usage Rights Notice, this list of conditions and the following disclaimer.
+  ~
+  ~ * Redistributions in binary form must reproduce the above Government Usage Rights Notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ * The names, trademarks, and service marks of the National Library of Medicine, the National Institutes of Health, and the names of any of the software developers shall not be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE U.S. GOVERNMENT AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE U.S. GOVERNMENT
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<resources>
+	<string name="app_name">TriagePic®</string>
+	<string name="add_new">Add New</string>
+	<string name="title_card_view">Card View</string>
+    <string name="title_table_view">Table View</string>
+    <string name="title_main">Main</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_login">Login</string>
+    <string name="about_triagepic">TriagePic® is an R&amp;D project of the Lister Hill National Center for Biomedical  Communications, a division of the National Library of Medicine, part of the National Institutes of Health.</string>
+        <!-- Login -->
+    <string name="loginalert">"
+      * You must enter your Hospital Staff or Admin credentials to continue.
+      * After confirmation you must choose update to load current events and hospital infromation. Without event and hospital infromation you can only report practice records to a test event.
+      * On subsequent uses of TriagePic you will only be asked to update, but do not need to in order to continue reporting.
+      * If you do not have internet access you cannot login, update or send reports. Any reports created while there is no internet access will be sent when access returns.""
+</string>
+    <string name="username">Username:  </string>
+    <string name="password">Password:  </string>
+    <string name="tryagain_up">Please enter your username and password.</string>
+    <string name="tryagain_u">Please enter your username.</string>
+    <string name="tryagain_p">Please enter your password.</string>
+
+    <!-- Report A Patient -->
+
+    <string name="first_name">First Name</string>
+    <string name="first_name_hint">William "Bill" Q.</string>
+    <string name="last_name">Last Name</string>
+    <string name="last_name_hint">von Trappe, Jr.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="age">Age</string>
+    <string name="peds">Peds</string>
+    <string name="adult">Adult</string>
+    <string name="patient_id">Patient\nID</string>
+    <string name="patient_id_hint">012345678</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="green">Green</string>
+    <string name="green_bh">Green BH</string>
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
+    <string name="gray">Gray</string>
+    <string name="black">Black</string>
+    <string name="practice_mode">Practice Mode</string>
+
+    <!-- webservices -->
+
+    <string name="takePicture">Add Photo</string>
+    <string name="desc">Patient Image</string>
+    <string name="event">"Event"</string>
+    <string name="date">Date</string>
+    <string name="image">Image</string>
+    <string name="sex">Sex</string>
+    <string name="id">Patient \n ID</string>
+    <string name="first">First\nName</string>
+    <string name="last">Last\nName</string>
+
+    <!-- Hospital Info Labels -->
+    <string name="hospital_select">"Hospital: "</string>
+    <string name="org_name_label">Org Name: </string>
+    <string name="hospital_shortname">"Abbr./Short Name: "</string>
+    <string name="street1">"Street Address Line 1: "</string>
+    <string name="street2">"Street Address Line 2: "</string>
+    <string name="city">"Town or City: "</string>
+    <string name="state">""State/Province: "</string>
+    <string name="zip">"Zip/Postal Code: "</string>
+    <string name="phone">"Phone: "</string>
+    <string name="email">"Email: "</string>
+    <string name="website">"Web Site: "</string>
+    <string name="provider">"Provider ID (10 digit NPI): "</string>
+    <string name="latitude">"Latitude: "</string>
+    <string name="county">"County: "</string>
+    <string name="country">"Country: "</string>
+    <string name="fax">"Fax: "</string>
+    <string name="longitude">"Longitude: "</string>
+    <string name="zone">Zone</string>
+    <string name="current_hospital">"Current Hospital: "</string>
+    <string name="current_event">"Current Event: "</string>
+    <string name="current_webservice">"Current Webservice: "</string>
+    <string name="incident_id">"Incident ID: "</string>
+    <string name="parent_id">"Parent ID: "</string>
+    <string name="event_name">"Event: "</string>
+    <string name="event_shortname">"Short Name: "</string>
+    <string name="type">"Type: "</string>
+    <string name="event_street">"Street: "</string>
+    <string name="event_visibility">"Visibility: "</string>
+    <string name="event_state">"Event is currently "</string>
+    <!-- PL Webservice Errors -->
+    <string name="pl_error_0">No error.</string>
+    <string name="pl_error_1">Invalid username or password.</string>
+    <string name="pl_error_2">User account is not active. Please check your email for a link to activate your account.</string>
+    <string name="pl_error_3">User account is banned. Please contact support for help with this issue.</string>
+    <string name="pl_error_4">User account locked due to many failed authentication attempts.</string>
+    <string name="pl_error_5">Account activated.</string>
+    <string name="pl_error_6">User exists with provided email address.</string>
+    <string name="pl_error_7">Username is already in use.</string>
+    <string name="pl_error_8">Invalid email address.</string>
+    <string name="pl_error_9">       Password does not meet the following criteria:
+       1. The minimum length of the password is 8 characters.
+       2. The maximum length of the password is 16 characters.
+       3. Must have at least one uppercase character.
+       4. Must have at least one lowercase character.
+       5. Must have at least one numeral (0-9).
+       6. The password cannot contain your username.
+</string>
+    <string name="pl_error_10">User does not exist or user’s account is not active.</string>
+    <string name="pl_error_11">Email address is not associated with any user account.</string>
+    <string name="pl_error_12">Username does not exist.</string>
+    <string name="pl_error_13">Invalid confirmation request.</string>
+    <string name="pl_error_20">User is not a part of Hospital Staff or Hospital Staff Admin groups.</string>
+    <string name="pl_error_100">No hospital registered with this id.</string>
+    <string name="pl_error_200">sessionTimeout value missing from database.</string>
+    <string name="pl_error_201">Invalid number of uuid’s requested, value must be between 2 and 100.</string>
+    <string name="pl_error_300">Insufficient privileges to access data in this event.</string>
+    <string name="pl_error_301">Authentication required to access this non-public event.</string>
+    <string name="pl_error_302">Event does not exist with this shortname.</string>
+    <string name="pl_error_400">Invalid enumeration.</string>
+    <string name="pl_error_402">Invalid p_uuid ~ out of range.</string>
+    <string name="pl_error_403">Error parsing XML.</string>
+    <string name="pl_error_405">Event is closed to reporting.</string>
+    <string name="pl_error_406">Invalid event.</string>
+    <string name="pl_error_407">No record associated with this mass casualty ID exists.</string>
+    <string name="pl_error_408">Insufficient permission to revise this record.</string>
+    <string name="pl_error_410">No record available with the given uuid.</string>
+    <string name="pl_error_411">Invalid start or limit value.</string>
+    <string name="pl_error_412">Invalid or future unix timestamp.</string>
+    <string name="pl_error_413">Record has already expired.</string>
+    <string name="pl_error_414">Invalid datetime value specified.</string>
+    <string name="pl_error_415">This record has no EDXL component.</string>
+    <string name="pl_error_416">Only records reported via web services can be revised by web services.</string>
+    <string name="pl_error_417">Invalid stride size, must be an integer value between 1 and 1,000,000.</string>
+    <string name="pl_error_418">Insufficient permission to access this record.</string>
+    <string name="pl_error_419">Invalid image mimetype(s) ~ image(s) not added to record.</string>
+    <string name="pl_error_420">SHA-1 mismatch(s) or bad image data ~ image(s) rejected.</string>
+    <string name="pl_error_421">No image present with the given sha1.</string>
+    <string name="pl_error_422">One or more duplicate image(s) were detected for this person and rejected.</string>
+    <string name="pl_error_423">Bad image deletion request: invalid sha1 or image url.</string>
+    <string name="pl_error_424">One or more duplicate voiceNotes(s) were detected for this person and rejected.</string>
+    <string name="pl_error_425">Bad voiceNote deletion request: invalid sha1 or image url.</string>
+    <string name="pl_error_9998">Function not yet implemented (stub).</string>
+    <string name="pl_error_9999">Unknown error.</string>
+    <string name="edit_credentials">Edit Credentials</string>
+    <string name="tpot_error_9997">Insufficient permission to access this app.</string>
+    <string name="tpot_error_9996">Not online.</string>
+    <string name="tpot_error_9995">Error creating xml file, report not sent.</string>
+    <string name="tpot_error_9994">Error casting class</string>
+    <string name="tpot_error_9993">"Error not online, cannot delete"</string>
+    <string name="tpot_error_9991">"Sending"</string>
+    <string name="zero">0</string>
+    <string name="success">Your credentials have been successfully validated.</string>
+
+    <string-array name="webservices">
+        <item name="pl">Pl</item>
+        <item name="plmobile">Plmobile</item>
+        <item name="plstage">Plstage (Development)</item>
+    </string-array>
+
+    <string name="totals">Totals</string>
+    <string name="today">Today</string>
+    <string name="last_24_hours">Last 24 Hrs.</string>
+    <string name="this_event">This Event</string>
+    <string name="all_shown">All Shown</string>
+    <string name="stat">Statistics</string>
+    <string name="total">Total</string>
+    <string name="m">M</string>
+    <string name="f">F</string>
+    <string name="u">U</string>
+    <string name="a">A</string>
+    <string name="p">P</string>
+    <string name="content_description">Patient Image</string>
+    <string name="err">Send\nStatus</string>
+    <string name="patient_photo">Patient Photo</string>
+    <string name="caption">Caption</string>
+    <string name="lorem">\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="image_desc">Patient Image</string>
+    <string name="patient_idd">"Patient Id "</string>
+    <string-array name="mnth_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>Octomber</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="q1">"How to start"</string>
+    <string name="a1">"1.	Press the TriagePic icon to launch TriagePic®;\n2.	For the first time user, the login screen will show up after start up;\n3.	Select the Web Server;\n4.	Test the Web Server availability;\n5.	Select hospital;\n6.	Select event;\n7.	Enter username and password;\n8.	After authentication is verified, you will come to the home screen."</string>
+    <string name="title_changelog">Change log</string>
+    <string name="changelog_close">Close</string>
+    <string name="btn_show_change_log">Show change log</string>
+    <string name="btn_custom_style">Custom style</string>
+    <string name="btn_show_change_log_html">Custom activity</string>
+    <string name="title_activity_custom_changelog">Custom change log activity</string>
+
+    <string name="description">"This is an Android version of the TriagePic® client software used by hospital staff to reunify friends and family during a mass disaster. TriagePic® is a reporting and tracking tool that allows staff to capture photos and brief information (name, age, gender, etc.) on disaster victims as they arrive at the hospital. This information on victims is stored in a database that may be searched by staff for family reunification purposes."</string>
+
+    <string name="change">Change</string>
+    <string name="scan">Scan</string>
+    <string name="hospital">Hospital</string>
+
+    <string name="release_date">"Release Date 6/1/2018"</string>
+
+</resources>

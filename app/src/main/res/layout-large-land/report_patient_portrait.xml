@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Informational Notice:
+  ~
+  ~ This software, the ”TBD,” was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
+  ~
+  ~ The license of this software is an open-source BSD-like license.  It allows use in both commercial and non-commercial products.
+  ~
+  ~ The license does not supersede any applicable United States law.
+  ~
+  ~ The license does not indemnify you from any claims brought by third parties whose proprietary rights may be infringed by your usage of this software.
+  ~
+  ~ Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in Data—General.
+  ~ The license for this software is intended to be expansive, rather than restrictive, in encouraging the use of this software in both commercial and non-commercial products.
+  ~
+  ~ LICENSE:
+  ~
+  ~ Government Usage Rights Notice:  The U.S. Government retains unlimited, royalty-free usage rights to this software, but not ownership, as provided by Federal law.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ * Redistributions of source code must retain the above Government Usage Rights Notice, this list of conditions and the following disclaimer.
+  ~
+  ~ * Redistributions in binary form must reproduce the above Government Usage Rights Notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~
+  ~ * The names, trademarks, and service marks of the National Library of Medicine, the National Institutes of Health, and the names of any of the software developers shall not be used to endorse or promote products derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE U.S. GOVERNMENT AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE U.S. GOVERNMENT
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/report_patient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:id="@+id/patient_name_gender_caption_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/first_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/first_name_field"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/first_name_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences|textPersonName"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/last_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/last_name_field"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences|textPersonName"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/sex"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/gendergroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/male" />
+
+            <CheckBox
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="@string/female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/agegroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/adult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adult" />
+
+            <CheckBox
+                android:id="@+id/peds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peds" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/caption"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="@string/lorem"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/patient_id_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/patient_name_gender_caption_box"
+        android:layout_below="@id/patient_name_gender_caption_box" >
+
+        <TextView
+            android:id="@+id/patient_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_idd"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/patient_id_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/patient_id_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/patient_id_hint"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/increment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/increment"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/decrement"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/decrement"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <CheckBox
+            android:id="@+id/practice_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right|center_vertical"
+            android:text="@string/practice_mode"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/takeAPicture"
+        android:layout_alignTop="@id/patient_name_gender_caption_box"
+        android:layout_margin="25dp"
+        android:layout_toRightOf="@id/patient_name_gender_caption_box"
+        android:background="@color/black1"
+        android:contentDescription="@string/image_desc"
+        android:src="@drawable/defaultpatient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@id/patient_id_box"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/green" >
+
+            <CheckBox
+                android:id="@+id/green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="@string/green"
+                android:textColor="#000000" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" 
+                        android:background="@drawable/light_green">
+
+            <CheckBox
+                android:id="@+id/green_bh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+
+                android:text="@string/green_bh"
+                android:textColor="#000000" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" 
+            android:background="@drawable/yellow">
+
+            <CheckBox
+                android:id="@+id/yellow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                
+                android:text="@string/yellow"
+                android:textColor="#000000" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:background="@drawable/red">
+
+            <CheckBox
+                android:id="@+id/red"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+
+                
+                android:text="@string/red"
+                android:textColor="#000000" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"   android:background="@drawable/gray">
+
+            <CheckBox
+                android:id="@+id/gray"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+              
+                android:text="@string/gray"
+                android:textColor="#000000" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/black" >
+
+            <CheckBox
+                android:id="@+id/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="@string/black"
+                android:textColor="@color/white1"
+                android:textColorHint="@color/white1" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/takeAPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/patient_id_box"
+        android:layout_alignRight="@+id/gallery"
+        android:text="@string/takePicture"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/image_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/gallery"
+        android:layout_alignBottom="@+id/takeAPicture"
+        android:layout_below="@id/gallery"
+        android:layout_toLeftOf="@+id/takeAPicture"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
